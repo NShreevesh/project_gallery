@@ -1,27 +1,42 @@
-/* Base Styles */
+    /* Base Styles */
 
-body {
+    body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     background-color: #0c0c0c;
-  }
+    }
 
-  section {
+    section {
     display: flex;
     flex-wrap: wrap;
-  }
+    }
 
-  header{
+    header{
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 15vh;
     color: #e2b8aa;
-  }
+    }
 
-  .project {
+    .my-name {
+    font-size: 48px;
+    display: inline-block;
+    }
+
+    .my-name span {
+    display: inline-block;
+    transition: transform 0.3s;
+    }
+
+    .my-name span:hover {
+    transform: scale(1.5);
+    color: #c22085;
+    }
+
+    .project {
     width: 30%;
     margin: 1.5%;
     background-color: #0c0c0c;
@@ -35,9 +50,9 @@ body {
     color: #fff;
     position: relative;
     z-index: 1;
-  }
+    }
 
-  .project::before{
+    .project::before{
     content: '';
     background: linear-gradient(
         to top,
@@ -50,38 +65,38 @@ body {
     left: 0;
     top: 0;
     z-index: -1;
-  }
+    }
 
-  .project:hover::before{
+    .project:hover::before{
     transition: height 600ms ease ;
     height: 100%;
-  }
+    }
 
-  .project-section{
+    .project-section{
     min-height: 70vh;
-  }
+    }
 
-  .img-container{
+    .img-container{
     height: 15rem;
     width: 95%;
     display: flex;
-  }
-  .img-container img {
+    }
+    .img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-  .project h2 {
+    }
+    .project h2 {
     font-size: 1.5rem;
     margin: 0 0 1rem 0;
-  }
-  
-  .project p {
+    }
+
+    .project p {
     font-size: 1rem;
     margin: 0 0 2rem 0;
-  }
-  
-  .project a {
+    }
+
+    .project a {
     display: inline-block;
     background-color: #333;
     color: #c22085;
@@ -92,46 +107,45 @@ body {
     background-position: 100%;
     background-size: 200% 100%;
     transition: background-position 0.5s;
-  }
-  
-.project a:hover{
+    }
+
+    .project a:hover{
     color:#000000;
     background-position: 0%;
-}
-  footer{
+    }
+    footer{
     min-height: 15vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #e2b8aa;
-  }
+    }
 
-  h2::after {
+    h2::after {
     content: '';
     display: block;
     width: 3rem;
     height: 0.25rem;
     background-color: #333;
     margin-top: 1rem;
-  }
-  
-  a::before {
+    }
+
+    a::before {
     content: '\2192';
     margin-right: 0.25rem;
-  }
-  
-  
-  /* Media Queries */
-  
-  @media screen and (max-width: 48rem) {
-    
+    }
+
+
+    /* Media Queries */
+
+    @media screen and (max-width: 48rem) {
+
     section {
-      display: block;
+        display: block;
     }
-    
+
     .project {
-      width: 90%;
-      margin: 1rem;
+        width: 90%;
+        margin: 1rem;
     }
-  }
-  
+    }
